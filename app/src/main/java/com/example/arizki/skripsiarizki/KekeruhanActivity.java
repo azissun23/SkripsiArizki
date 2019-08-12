@@ -20,7 +20,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import cz.msebera.android.httpclient.Header;
 
-public class Kekeruhan extends AppCompatActivity {
+public class KekeruhanActivity extends AppCompatActivity {
     @BindView(R.id.NTUset)
     RecyclerView NTUset;
     SensorAdapter adapter;
@@ -30,7 +30,7 @@ public class Kekeruhan extends AppCompatActivity {
         setContentView(R.layout.activity_kekeruhan);
         ButterKnife.bind(this);
         adapter = new SensorAdapter(this);
-        String url = "http://hidroponik.96.lt/gettabel.php";
+        String url = "http://monitoringkolam.hol.es/get_monitoring.php";
         DemoAsync demoASync = new DemoAsync();
         demoASync.execute(url);
     }
@@ -73,7 +73,7 @@ public class Kekeruhan extends AppCompatActivity {
         @Override
         protected void onPostExecute (ArrayList<Sensor> sensor){
             super.onPostExecute(sensor);
-            NTUset.setLayoutManager(new LinearLayoutManager(Kekeruhan.this));
+            NTUset.setLayoutManager(new LinearLayoutManager(KekeruhanActivity.this));
             adapter.setListSensor(sensor);
             NTUset.setAdapter(adapter);
         }
