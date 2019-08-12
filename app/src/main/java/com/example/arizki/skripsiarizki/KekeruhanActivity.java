@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.example.arizki.skripsiarizki.Pojo.Sensor;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.MySSLSocketFactory;
 import com.loopj.android.http.SyncHttpClient;
@@ -21,8 +22,8 @@ import butterknife.ButterKnife;
 import cz.msebera.android.httpclient.Header;
 
 public class KekeruhanActivity extends AppCompatActivity {
-    @BindView(R.id.NTUset)
-    RecyclerView NTUset;
+    @BindView(R.id.NTUKategori)
+    RecyclerView NTUKategori;
     SensorAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,9 +74,9 @@ public class KekeruhanActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute (ArrayList<Sensor> sensor){
             super.onPostExecute(sensor);
-            NTUset.setLayoutManager(new LinearLayoutManager(KekeruhanActivity.this));
+            NTUKategori.setLayoutManager(new LinearLayoutManager(KekeruhanActivity.this));
             adapter.setListSensor(sensor);
-            NTUset.setAdapter(adapter);
+            NTUKategori.setAdapter(adapter);
         }
     }
 }

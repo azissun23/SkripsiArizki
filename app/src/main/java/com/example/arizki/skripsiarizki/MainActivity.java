@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.arizki.skripsiarizki.MenuActivity;
+import com.example.arizki.skripsiarizki.R;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;

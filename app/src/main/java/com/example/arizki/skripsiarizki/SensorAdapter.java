@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.arizki.skripsiarizki.Pojo.Sensor;
+
 import java.util.ArrayList;
 
 import butterknife.BindView;
@@ -38,7 +40,6 @@ public class SensorAdapter extends RecyclerView.Adapter<SensorAdapter.ViewHolder
     @Override
     public void onBindViewHolder (@NonNull SensorAdapter.ViewHolder viewHolder, int i){
         viewHolder.NTU.setText(getListSensor().get(i).getNTU());
-        viewHolder.Kg.setText(getListSensor().get(i).getKg());
         viewHolder.status.setText(getListSensor().get(i).getstatus());
     }
     @Override
@@ -46,12 +47,11 @@ public class SensorAdapter extends RecyclerView.Adapter<SensorAdapter.ViewHolder
         return getListSensor().size();
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
+
         @BindView(R.id.hasilNTU)
         TextView NTU;
         @BindView(R.id.status)
         TextView status;
-        @BindView(R.id.hasilKg)
-        TextView Kg;
 
         public ViewHolder (@NonNull View itemView){
             super(itemView);

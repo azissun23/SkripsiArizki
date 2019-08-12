@@ -13,11 +13,11 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        button =(Button) findViewById(R.id.kekeruhan);
+        button =(Button) findViewById(R.id.stockpakanikan);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),KekeruhanActivity.class);
+                Intent intent = new Intent(getApplicationContext(),Stock.class);
                 startActivity(intent);
             }
         });

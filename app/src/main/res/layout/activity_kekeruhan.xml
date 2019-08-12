@@ -41,11 +41,10 @@
             android:background="#448AFF" />
 
         <android.support.v7.widget.RecyclerView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:id="@+id/NTUset">
+            android:id="@+id/NTUKategori"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
 
         </android.support.v7.widget.RecyclerView>
 
